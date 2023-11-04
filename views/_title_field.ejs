@@ -1,0 +1,11 @@
+<div class="form-group mb-2">
+    <label for="title">Title</label>
+    <input
+        required
+        value="<%= game ? game.title : (category ? category.title : '') %>"
+        type="text"
+        name="title"
+        id="title"
+        class="form-control"
+    />
+</div>

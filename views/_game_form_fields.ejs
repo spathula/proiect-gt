@@ -1,0 +1,31 @@
+<%- include('_title_field') %>
+<div class="form-group mb-2">
+    <label for="description">Description</label>
+    <textarea name="description" id="description" class="form-control">
+<%= game.description %></textarea
+    >
+</div>
+<div class="form-group mb-2">
+    <label for="price">Price</label>
+    <input
+        required
+        value="<%= game.price %>"
+        min="0"
+        max="1000"
+        type="number"
+        name="price"
+        id="price"
+        class="form-control"
+    />
+</div>
+<div class="form-group mb-4">
+    <label for="categoryTitle">Category</label>
+    <input
+        disabled
+        value="<%= category.title %>"
+        name="categoryTitle"
+        id="categoryTitle"
+        class="form-control"
+    />
+    <input hidden value="<%= category.id %>" name="category" />
+</div>
